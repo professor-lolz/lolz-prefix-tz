@@ -6,7 +6,7 @@
 2. **Клонирование репозитория:**
    - Клонируйте репозиторий в локальную папку с помощью следующей команды:
      ```bash
-     git clone https://github.com/lolz-prefix-tz
+     git clone https://github.com/StErN4ik/lolz-prefix-tz
      ```
 
 3. **Установка зависимостей:**
