@@ -7,7 +7,7 @@ def starting() -> None:
     # Обьявление имен для классов
     database = BookDatabase()
     console = ConsoleProgram(database)
-    # Запуск самой программы. Вызов метода start в функции ConsoleProgram
+    # Запуск самой программы. Вызов метода start в классе ConsoleProgram
     console.start()
     # Закрытие соединения с БД после завершения работы программы
     database.close_connection()
