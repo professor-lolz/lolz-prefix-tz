@@ -93,15 +93,22 @@ class ConsoleProgram:
 
     # Метод для добавления новой книги
     def add_book(self) -> None:
-        # Получение информации о новой книге от пользователя
-        title = input('Введите название книги: ')
-        author = input('Введите автора книги: ')
-        description = input('Введите описание книги: ')
-        genre = input('Введите жанр книги: ')
+        while True:
+            # Получение информации о новой книге от пользователя
+            title = input('Введите название книги: ')
+            author = input('Введите автора книги: ')
+            description = input('Введите описание книги: ')
+            genre = input('Введите жанр книги: ')
 
-        # Добавление книги в БД
-        self.database.add_book(title, author, description, genre)
-        print('\nКнига успешно добавлена в базу данных.\n')
+            # Проверка на пустые значения
+            if not title or not author or not description or not genre:
+                print('\n[!] Пожалуйста, заполните все поля.\n')
+            else:
+                # Добавление книги в БД
+                self.database.add_book(title, author, description, genre)
+                print('\nКнига успешно добавлена в базу данных.\n')
+                break  # Выход из цикла, если все поля заполнены
+
 
     # Метод для удаления книги
     def delete_book(self) -> None:
